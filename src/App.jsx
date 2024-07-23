@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import CoreConcepts from "./components/Props";
-import componentImg from "./assets/components.png";
 import { CORE_CONCEPTS } from "./data";
 
 function App() {

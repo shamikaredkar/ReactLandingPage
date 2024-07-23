@@ -1,3 +1,4 @@
+import "./Props.css";
 const CoreConcepts = ({ img, title, description }) => {
   return (
     <>
