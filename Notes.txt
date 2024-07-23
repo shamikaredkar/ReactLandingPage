@@ -13,4 +13,26 @@
     iv. Dynamic Code: 
         - Logic that produces the actual value that is added to JSX
         - Content/Value is derived at runtime
-        
+2. Loading images:
+    i. Using dynamic value expression for attribute values
+        - src = "./src/assets/react-core-concepts.png"; instead use:
+        - import reactImg from '../assets/react-core-concepts.png';
+3. Props:
+    i. Similar to function parameters
+    ii. React allows you to pass data to components via Props
+        - Set component input data via "custom HTML attributes" (props)
+        - Component function receives props parameter with configurable data
+    iii. Alternate ways to props syntaxes:
+        - Our data is stored in data.js
+        - Currently we are adding data from the data.js into our props in this syntax
+        - <CoreConcepts
+              img={CORE_CONCEPTS[0].image}
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+          />
+        - Another way to do this is using the spread operator
+            - Using spread operator to pull out all key value pairs of an object at index [0]
+            <CoreConcepts {...CORE_CONCEPTS[0]}/>
+        - To add Props to your child components while importing
+            - Use object destructuring.
+
