@@ -45,5 +45,18 @@
         - This approach makes sense if you got multiple smaller pieces of information that must be passed to a component
         - Adding extra props instead of just wrapping content means extra work
         <TabButton label="Components"/>
-    
+    vi. onClick prop:
+        - It is an event handler
+        - Typical naming convent starts with handle eg. handleClick
+        - Pass a javascript function to this prop which prompts to fulfil the event
+4. State:
+    i. useState():
+        - React hooks can only be called inside of Component functions
+        - Must not be called outside of component functions
+        - Only call hooks at top level
+        - React hooks must not be called in nexted code statements (inside of if-statements)
+        - Accepts a value that is basically the default value you want react to use when the component is rendered.
+        - Yields an array with 2 elements
+        - [currentStoredValue, FunctionToUpdateValue]
+
 
