@@ -1,0 +1,16 @@
+1. Components:
+    i. Name starts with an Uppercase Character:
+        - Multi-word names must be written in PascalCase
+        - It' recommended to pick a case that describes the UI building block.
+        - Is written as a HTML tag.
+        - Wraps built-in or other custom components
+        - React traverses the component tree until it has only built-in components left
+    ii. Returns "renderable" content
+        - Mostly HTML content
+    iii. Static content:
+        - Content that's hardcoded to the JSX code
+        - Can't change at runtime
+    iv. Dynamic Code: 
+        - Logic that produces the actual value that is added to JSX
+        - Content/Value is derived at runtime
+        
