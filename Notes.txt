@@ -35,4 +35,15 @@
             <CoreConcepts {...CORE_CONCEPTS[0]}/>
         - To add Props to your child components while importing
             - Use object destructuring.
+    iv. Children props:
+        - React automatically passes a special prop named "children" to every custom component
+        - The content between component opening and closing tag is used as a value for the special "children" prop
+        - Refers to the content between your components
+        - <TabButton>Component<TabButton/>
+        - When your component wraps another component or content it is called component composition
+    v. Label prop:
+        - This approach makes sense if you got multiple smaller pieces of information that must be passed to a component
+        - Adding extra props instead of just wrapping content means extra work
+        <TabButton label="Components"/>
+    
 
