@@ -23,6 +23,21 @@ function App() {
     */
     setSelectedTopic(selectedButton);
   };
+
+  let tabContent = <p>Please select a topic to begin</p>;
+  if (selectedTopic) {
+    tabContent = (
+      <div id='tab-content'>
+        <details>
+          <summary>{EXAMPLES[selectedTopic].title}</summary>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+        </details>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
   return (
     <div>
       <Header />
@@ -63,19 +78,8 @@ function App() {
             <TabButton onClick={() => handleClick("state")}>State</TabButton>
           </menu>
           {/*Conditional Rendering*/}
-          {!selectedTopic ? (
-            <p>Please select a topic to begin</p>
-          ) : (
-            <div id='tab-content'>
-              <details>
-                <summary>{EXAMPLES[selectedTopic].title}</summary>
-                <p>{EXAMPLES[selectedTopic].description}</p>
-              </details>
-              <pre>
-                <code>{EXAMPLES[selectedTopic].code}</code>
-              </pre>
-            </div>
-          )}
+          {/* {!selectedTopic ? <p>Please select a topic to begin</p> : div} */}
+          {tabContent}
         </section>
       </main>
     </div>
